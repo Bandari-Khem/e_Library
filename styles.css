@@ -16,7 +16,7 @@ header {
 }
 
 .logo {
-    font-size: 24px;
+    font-size: ;
     font-weight: bold;
 }
 
@@ -108,40 +108,16 @@ nav ul li a:hover {
     margin-bottom: 10px;
 }
 
-footer {
-    text-align: center;
-    color: #333;
-    padding: 20px;
-    background-color: #15b1c3;
-    margin-top: 20px;
-    border-top: 1px solid #e92c2c;
-}
-
-footer h1 {
-    margin: 0;
-}
-
 /* Desktop Navigation */
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .menu-toggle {
         display: none;
     }
 
-    nav ul {
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    nav ul li {
-        margin: 0 10px;
-    }
 }
 
-/* Mobile/Tablet Navigation */
+/* Mobile/Tablet Navigation have to change upto 1024 for tabs*/
 @media (max-width: 768px) {
-    nav ul {
-        display: none;
-    }
 
     #mobile-nav {
         display: none;
@@ -149,11 +125,7 @@ footer h1 {
         background-color: #7147e3;
         padding: 10px;
         position: absolute;
-        top: 60px;
-        left: 0;
-        width: 90%;
-        z-index: 1000;
-        border-radius: 5px;
+
     }
 
     #mobile-nav li {
@@ -173,28 +145,39 @@ footer h1 {
         background-color: #555;
     }
 
+    #ghusaun {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
     .menu-toggle {
         display: block;
-        background-color: #7147e3;
+        background-color: #3b6b79;
         color: #fff;
         padding: 10px;
-        font-size: 24px;
+        font-size: 1rem;
         cursor: pointer;
         border: none;
         width: 100%;
         text-align: left;
+        margin-right: 10px;
+        top: 60px;
+        right: 0;
+        width: 90%;
+        z-index: 1000;
+        border-radius: 15px;
+        box-shadow: 0 2px 8px rgba(216, 45, 45, 0.3);
     }
 
-    .menu-toggle:hover {
-        background-color: #555;
+    .menu-toggle:visited {
+        background-color: #4bd92b;
     }
 
     .menu-toggle:focus {
         outline: none;
         background-color: #444;
-    }
-
-    .menu-toggle:active {
-        background-color: #333;
     }
 }
