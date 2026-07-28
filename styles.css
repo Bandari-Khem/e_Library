@@ -20,44 +20,15 @@ header {
     font-weight: bold;
 }
 
-.search-bar {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.search-bar input[type="search"] {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    width: 100%;
-    max-width: 400px;
-}
-
-.search-bar input[type="button"] {
-    background-color: #7147e3;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.search-bar input[type="button"]:hover {
-    background-color: #5a38c1;
-}
-
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 20px;
 }
 
 nav ul li {
-    margin: 0;
+    margin-left: 20px;
 }
 
 nav ul li a {
@@ -114,7 +85,7 @@ nav ul li a:hover {
 
 .message {
     background-color: #fff;
-    padding: 40px 20px;
+    padding: 20px;
     text-align: center;
     margin: 20px 0;
     border-radius: 8px;
@@ -151,7 +122,7 @@ footer h1 {
 }
 
 /* Desktop Navigation */
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
     .menu-toggle {
         display: none;
     }
@@ -166,10 +137,40 @@ footer h1 {
     }
 }
 
-/* Tablet Navigation */
+/* Mobile/Tablet Navigation */
 @media (max-width: 768px) {
     nav ul {
         display: none;
+    }
+
+    #mobile-nav {
+        display: none;
+        flex-direction: column;
+        background-color: #7147e3;
+        padding: 10px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 90%;
+        z-index: 1000;
+        border-radius: 5px;
+    }
+
+    #mobile-nav li {
+        margin: 10px 0;
+    }
+
+    #mobile-nav li a {
+        color: #fff;
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+        background-color: #333;
+        border-radius: 5px;
+    }
+
+    #mobile-nav li a:hover {
+        background-color: #555;
     }
 
     .menu-toggle {
@@ -195,33 +196,5 @@ footer h1 {
 
     .menu-toggle:active {
         background-color: #333;
-    }
-
-    #main-nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: #7147e3;
-        padding: 10px;
-    }
-
-    #main-nav ul.active {
-        display: flex;
-    }
-
-    #main-nav ul li {
-        margin: 10px 0;
-    }
-
-    #main-nav ul li a {
-        color: #fff;
-        padding: 10px;
-        width: 100%;
-        text-align: left;
-        background-color: #333;
-        border-radius: 5px;
-    }
-
-    #main-nav ul li a:hover {
-        background-color: #555;
     }
 }

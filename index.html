@@ -13,20 +13,10 @@
         <div class="logo">
             <h1>eLibrary</h1>
         </div>
-        <div class="search-bar">
-            <input type="search" id="search-input" placeholder="Search..." />
-            <input type="button" value="🔍" placeholder="🔍" />
-            <select id="filter-select">
-                <option value="all">All Categories</option>
-                <option value="Academic">Academic</option>
-                <option value="non-academic">Non-Academic</option>
-            </select>
-        </div>
-        </div>
 
         <nav id="main-nav">
             <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
-            <ul>
+            <ul id="mobile-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="books.html">Books</a></li>
                 <li><a href="contact-us.html">Contact Us</a></li>
@@ -36,7 +26,7 @@
 
         <div id="ghusaun">
             <nav>
-                <ul>
+                <ul id="mobile-nav">
                     <li> <a href="login.html" class="btn">Login</a></li>
                     <li><a href="registration.html" class="btn">Sign
                             Up</a></li>
@@ -62,15 +52,24 @@
         </h2>
     </section>
     <script>
-        // Show dropdown by default on mobile
-        if (window.innerWidth <= 768) {
-            document.getElementById('main-nav').classList.add('active');
+        function toggleMenu() {
+            const nav = document.getElementById("mobile-nav");
+            nav.style.display = nav.style.display === "flex" ? "none" : "flex";
         }
 
-        function toggleMenu() {
-            const nav = document.getElementById('main-nav');
-            nav.classList.toggle('active');
+        // Optional: Show the menu on small screens by default
+        if (window.innerWidth <= 768) {
+            document.getElementById("mobile-nav").style.display = "flex";
         }
+
+        // Optional: Update display on window resize
+        window.addEventListener("resize", () => {
+            if (window.innerWidth <= 768) {
+                document.getElementById("mobile-nav").style.display = "flex";
+            } else {
+                document.getElementById("mobile-nav").style.display = "none";
+            }
+        });
     </script>
 </body>
 
