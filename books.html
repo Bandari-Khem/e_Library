@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <link rel="stylesheet" href="bookstyle.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>eLibrary</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Find the Books You're Looking For</h1>
+            <p style="font-style: italic;">
+                Use keywords, categories, or authors to narrow down your search and discover the perfect book for your
+                next
+                read.
+            </p>
+        </section>
+
+        <section class="search-section">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search books...">
+            </div>
+        </section>
+
+        <section class="book-list">
+            <div id="bookContainer"></div>
+        </section>
+    </main>
+
+    <!-- script to fetch and display books -->
+    <script src="script.js"></script>
+</body>
+
+</html>

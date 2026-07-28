@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eLibrary - Register - Step 2</title>
+    <link rel="stylesheet" href="forms.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>eLibrary</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <form id="registration-step2-form">
+                <p
+                    style="float: left;text-decoration: none;font-family: sans-serif;font-size: large; font-weight: 600;">
+                    <a href="registration.html" style="float: left; margin-left: 20px;">👈Go
+                        Back</a>
+                </p><br><br>
+                <h2 style="float: left; font-size: 22px;">Select an username for your account:</h2>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+
+                <button type="submit">Register</button>
+            </form>
+        </section>
+    </main>
+    <script>
+        // This JavaScript file will handle the second step of registration (username)
+        document.getElementById('registration-step2-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Redirect to the login page after successful registration
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+
+</html>

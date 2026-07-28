@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eLibrary - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>eLibrary</h1>
+        </div>
+        <div class="search-bar">
+            <input type="search" id="search-input" placeholder="Search..." />
+            <input type="button" value="🔍" placeholder="🔍" />
+            <select id="filter-select">
+                <option value="all">All Categories</option>
+                <option value="Academic">Academic</option>
+                <option value="non-academic">Non-Academic</option>
+            </select>
+        </div>
+        </div>
+
+        <nav id="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+        </nav>
+
+        <div id="ghusaun">
+            <nav>
+                <ul>
+                    <li> <a href="login.html" class="btn">Login</a></li>
+                    <li><a href="registration.html" class="btn">Sign
+                            Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="message">
+        <h1>Welcome to eLibrary. Your one-stop destination for books and more!</h1>
+
+        <p>
+            Explore a vast collection of books across different categories like Academic,and Non-Academic.
+        </p>
+
+        <p>
+            Use our powerful search and filter options to find the perfect book for you.
+        </p>
+
+        <h2 style="font-style: italic;">
+            Whether you're looking to read, study, or relax, eLibrary is here to help you discover new stories,
+            ideas, and knowledge. Start your journey today and dive into the world of books!
+        </h2>
+    </section>
+    <script>
+        // Show dropdown by default on mobile
+        if (window.innerWidth <= 768) {
+            document.getElementById('main-nav').classList.add('active');
+        }
+
+        function toggleMenu() {
+            const nav = document.getElementById('main-nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
