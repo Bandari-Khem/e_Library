@@ -1,6 +1,6 @@
 <?php
 // Include the database connection
-require_once '../Backend/php/db.php';
+require_once 'Backend/php/db.php';
 
 // Fetch all books from the database
 $sql = "SELECT * FROM books";
